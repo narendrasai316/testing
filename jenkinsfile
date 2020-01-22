@@ -1,0 +1,25 @@
+pipeline {
+  agent any 
+  stages {
+    stage('preparation') {
+      steps {
+        git(url: 'https://github.com/narendrasai316/testing.git', branch: 'master')
+      }
+    }  
+    stage('checkout') {
+      steps {
+        echo "checkout"
+      }
+    }
+    stage('build') {
+      steps {
+        echo "build"
+      }
+    }
+    stage('deploy') {
+      steps {
+          echo "deploy"
+      }
+    }
+  }
+  }
